@@ -47,7 +47,6 @@ video_t=function(scene, id, x, y, texture, file, width, height, loop) {
 	this.on('drag', function (gameobject, drag_x, drag_y) {
 		this.x=drag_x;
 		this.y=drag_y;
-		console.log('x: '+this.x+' y: '+this.y);
 	});
 	this.on('dragend', function (gameobject) {
 		this.clearTint();

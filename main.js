@@ -9,7 +9,6 @@ var scene_test_t={
 	video_3:null,
  	preload:function() {
 		app_resize();
-		console.log('preload.');
 		this.load.image('phaser', 'media/phaser3.png');
 	},
 	create:function() {
