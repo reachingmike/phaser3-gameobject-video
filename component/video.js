@@ -1,6 +1,6 @@
 /* video typedef. */                                                                                                               
 video_t=function(scene, id, x, y, texture, file, width, height, loop) {
-	/* set texture poitner to new canvas. */
+	/* set texture pointer to new canvas. */
 	scene.textures.createCanvas(texture, width, height);
 	Phaser.GameObjects.Image.call(this, scene, x, y, texture);
 
@@ -64,7 +64,7 @@ video_t.prototype.update=function() {
 	/* phaser's update call. */
 	if (this.loaded) {
 		this.texture.context.drawImage(this.video, 0, 0);
-		/* beware of refresh and issues with  - need solution here. */
+		/* beware of refresh and issues with overloading the GPU  - need more research here. */
 		this.texture.refresh();
 		//this.texture.update();
 	}
